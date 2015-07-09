@@ -10,6 +10,7 @@ var Router = require('router');
 var connection = mysql.createConnection({
    
     user : 'user',
+    host : 'aws-rds-mysql.cs1axqhbzpaw.us-west-2.rds.amazonaws.com'
     password : 'min2jjang',
     database : 'sopt'
 });
@@ -25,8 +26,8 @@ router.get('/', function (request, response) {
         
         if (!error) {
             
-            connection.query('select * from candidate;', function (error, query) {(
-            connection.query('DELETE From Personal where code = '%s')
+            connection.query('select * from candidate;', function (error, query) 
+            connection.query('DELETE From Personal where code = '%s') ({
                 response.writeHead(200, { 'Content-Type' : 'text/html; charset=utf-8;' });
                 response.end(ejs.render(data, { 'query' : query }));
             });
