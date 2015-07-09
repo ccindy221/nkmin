@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
    
     user : 'user',
     password : 'min2jjang',
-    database : 'test1'
+    database : 'sopt'
 });
 
 var connect = new Connect();
